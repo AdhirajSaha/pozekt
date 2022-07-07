@@ -72,7 +72,7 @@ export class EmployeeComponent implements OnInit {
     this.router.navigate(["/employee"]);
   }
   getCustomers() {
-    this.router.navigate(["/employee/customers"]);
+    this.router.navigate(["/customer"]);
 
   }
   logout() {

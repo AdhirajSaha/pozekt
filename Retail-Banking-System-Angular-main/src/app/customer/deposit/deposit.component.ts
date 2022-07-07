@@ -5,6 +5,7 @@ import { AccountInput } from "@app/_models/accountinput";
 import { AuthenticationService } from "@app/_services";
 import { TransactionService } from "@app/_services/transaction.service";
 import { first } from "rxjs/operators";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: "app-deposit",
@@ -19,11 +20,11 @@ export class DepositComponent implements OnInit {
   accountInput = new AccountInput();
 
   constructor(
-    private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
-    private router: Router,
-    private transactionService: TransactionService,
-    private authenticationService: AuthenticationService
+    public formBuilder: FormBuilder,
+    public route: ActivatedRoute,
+    public router: Router,
+    public transactionService: TransactionService,
+    public authenticationService: AuthenticationService
   ) {}
 
   ngOnInit(): void {

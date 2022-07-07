@@ -15,7 +15,17 @@ export class HomeComponent {
     goToPage(pageName:string):void{
         this.router.navigate([`${pageName}`]);
     }
+    
+    getDashboard() {
+    this.router.navigate(["/employee"]);
+  }
+  getCustomers() {
+    this.router.navigate(["/customer"]);
 
+  }
+  getDashboard2() {
+    this.router.navigate(["/customer"]);
+  }
     ngOnInit() {
         this.loading = true;
         this.userService.getAll().pipe(first()).subscribe(users => {

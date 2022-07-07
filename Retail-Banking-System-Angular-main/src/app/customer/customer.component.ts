@@ -30,9 +30,12 @@ export class CustomerComponent implements OnInit {
   viewStatements() {
     this.router.navigate(["statements"], { relativeTo: this.route });
   }
+  getCustomers() {
+    this.router.navigate(["/customer"]);
 
-  getDashboard() {
-    this.router.navigate(["/customer", this.route.snapshot.params.customerid]);
+  }
+  getDashboard2() {
+    this.router.navigate(["/customer"]);
   }
   logout() {
     this.authenticationService.logout();
