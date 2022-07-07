@@ -7,32 +7,36 @@ import { AuthenticationService } from "@app/_services";
   templateUrl: "./customer.component.html",
 })
 export class CustomerComponent implements OnInit {
-  constructor(private router: Router, private route: ActivatedRoute, private authenticationService: AuthenticationService) {}
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private authenticationService: AuthenticationService
+  ) {}
 
   ngOnInit() {
-    // this.router.navigate(["accounts"], { relativeTo: this.route});
+    // this.router.navigate(["accounts"], { relativeTo: this.route });
+    // this.router.navigate(["deposit"], { relativeTo: this.route });
   }
 
   deposit() {
-    this.router.navigate(["deposit"], { relativeTo: this.route });
+    this.router.navigate(["/deposit"], { relativeTo: this.route });
   }
 
   transfer() {
-    this.router.navigate(["transfer"], { relativeTo: this.route });
+    this.router.navigate(["/transfer"], { relativeTo: this.route });
   }
 
   withdraw() {
-    this.router.navigate(["withdraw"], { relativeTo: this.route });
+    this.router.navigate(["/withdraw"], { relativeTo: this.route });
   }
   viewTransactions() {
-    this.router.navigate(["transactions"], { relativeTo: this.route });
+    this.router.navigate(["/transactions"], { relativeTo: this.route });
   }
   viewStatements() {
-    this.router.navigate(["statements"], { relativeTo: this.route });
+    this.router.navigate(["/statements"], { relativeTo: this.route });
   }
   getCustomers() {
     this.router.navigate(["/customer"]);
-
   }
   getDashboard2() {
     this.router.navigate(["/customer"]);

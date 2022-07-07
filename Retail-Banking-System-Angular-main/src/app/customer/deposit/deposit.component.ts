@@ -5,7 +5,7 @@ import { AccountInput } from "@app/_models/accountinput";
 import { AuthenticationService } from "@app/_services";
 import { TransactionService } from "@app/_services/transaction.service";
 import { first } from "rxjs/operators";
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @Component({
   selector: "app-deposit",
@@ -55,11 +55,13 @@ export class DepositComponent implements OnInit {
       .pipe(first())
       .subscribe((account) => {
         console.log(account);
-        this.router.navigate(["/customer", this.route.snapshot.params.customerid]);
+        this.router.navigate([
+          "/customer",
+          this.route.snapshot.params.customerid,
+        ]);
       });
   }
 
-  
   transfer() {
     this.router.navigate(["transfer"], { relativeTo: this.route });
   }
