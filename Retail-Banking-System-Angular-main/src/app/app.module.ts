@@ -14,10 +14,6 @@ import { HomeComponent } from './home';
 import { LoginComponent } from './login';
 import { EmployeeComponent } from './employee';
 import { CustomerComponent } from './customer';
-import { DepositComponent } from './customer/deposit/deposit.component';
-import { StatementsComponent } from './customer/statements/statements.component';
-import { TransferComponent } from './customer/transfer/transfer.component';
-import { WithdrawComponent } from './customer/withdraw/withdraw.component';
 
 @NgModule({
     imports: [
